@@ -1,0 +1,1012 @@
+
+*{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    padding-top:20vh;
+    background:#F0F1F2;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+}
+.custon_container{
+    padding:0 30px;
+}
+section,header{
+    margin-top: 25px;
+}
+/******************************************************* start nav bar **********************************/
+nav{
+    top:0;
+    padding:25px;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    .logo{
+        .cont_img{
+            width:250px;
+            height: 60px;
+            @media(min-width:993px) and ( max-width:1200px){
+                width:200px;
+                height: 60px;
+            }
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+    }
+    .search{
+        padding: 0px 27px 0 50px;
+        input{
+            border: 1.5px solid #D92121;
+            padding: 6px;
+            margin-top: 10px;
+            width: 80%;
+        }
+        button{
+            width: 20%;
+            padding: 8px 28px;
+            background: #D92121;
+            margin-left: -5px;
+            border: none;
+            text-transform: capitalize;
+            color: #fff;
+            font-weight: 400;
+        }
+    }
+    .contact{
+        @media(max-width:992px){
+            display: none !important;
+        }
+        .person_icon{
+            i{
+                content: "\f007";
+                font-size: 27px;
+                position: relative;
+                top: 15px;
+                left:-25px;
+            }
+        }
+        .links{
+            padding-top:5px;
+            margin-left: 10px;
+            position: relative;
+            top:-26px;
+            a{
+                display: block;
+                color:#222;
+                text-decoration: none;
+                transition: all .5s ease-in-out;
+                &:hover{
+                    color:#E64545;
+                }
+            }
+        }
+        .cart{
+            margin-top:16px;
+            i{
+                font-size: 26px;
+                position: relative;
+                left: -17px;
+            }
+            span{
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+/****************************************************** end nab bar ************************************/
+
+/********************************* start control box   *****************/
+.control_box{
+    position: fixed;
+    right: 0;
+    width:45px;
+    z-index: 9999;
+    top:200px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    div{
+        background: #73ACE6;
+        line-height:40px;
+        text-align: center;
+        width:100%;
+        position: relative;
+        top:10px;
+        margin-top: 5px;
+        border-radius:6px;
+        cursor: pointer;
+        &:hover .message{
+            display: inline;
+            left: -119px;
+        }
+        i{
+            color:#fff;
+        }
+        .message{
+            position: absolute;
+            width: 110px;
+            height: 30px;
+            background: #222;
+            color:#fff;
+            line-height: 30px;
+            font-size: 14px;
+            text-transform: capitalize;
+            border-radius:5px;
+            left: -114px;
+            top: 6px;
+            z-index: 9;
+            display: none;
+            &::before{
+                content: '';
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                right: -12px;
+                top: 10px;
+                border: 6px solid #00f;
+                border-color: transparent transparent transparent #222;
+            }
+        }
+    }
+}
+/********************************* end control box     *****************/
+
+
+/****************************************************** start header  ************************************/
+header{
+    background: #fff;
+    padding: 26px 25px 7px 25px;
+    .links{
+        h4{
+            margin-top: 10px;
+            margin-left: 8px;
+            font-weight: bold;
+            font-size: 19px;
+            text-transform: capitalize;
+        }
+        ul{
+            li{
+                padding: 5.8px 7px;
+                font-size: 14px;
+                position: relative;
+                width:257px;
+                text-transform:capitalize;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+                color:#5a5a5a;
+                a{
+                    text-decoration: none;
+                    &:hover{
+                        color:#D92121;
+                    }
+                }
+                &:hover{
+                    background: #F0F1F2;
+                    color:#D92121;
+                }
+            }
+        }
+    }
+
+    .slider{    /*****************      start the middel  slider ********************************************/
+        position: relative;
+        overflow: hidden;
+        width:93%;
+        @media (max-width:1200px ){
+            width:100%;
+        }
+        margin:auto;
+        img{
+            width:100%;
+            height: 400px;
+        }
+        &:hover{
+            .controls{
+                .prev{
+                    transform: translate(0,0);
+                }
+                .next{
+                    transform: translate(0,0);
+                }
+            }
+        }
+        .controls{
+            a{
+                position: absolute;
+                top: 48%;
+                width: 54px;
+                height: 50px;
+                line-height: 50px;
+                background: #2828288f;
+                cursor: pointer;
+                i{
+                    display: block;
+                    margin-top: 10px;
+                    color:#fff;
+                }
+            }
+            .prev{
+                transform: translate(-55px,0);
+                transition:  all .5s linear;
+            }
+            .next{
+                right:0;
+                transform: translate(55px,0);
+                transition:  all .5s linear;
+            }
+        }
+
+        .owl-pagination{
+            position: absolute;
+            bottom: 1px;
+            left: 50%;
+            margin-left: -67px;   
+        }
+        .active{
+            span{
+                background:#D92121 !important;
+            }
+        }
+    } /******************* start bootom galary  *********************/
+    .bootom_galary{
+        padding: 0px 42px;
+        @media (max-width:1200px){
+            padding:0 10px;
+        }
+        .item{
+            height: 116px;
+            padding:0 5px;
+            .row{
+                background:#f5f5f5bd;
+                height: 100%;
+                position: relative;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                &:hover{
+                    background: #F0F1F2;
+                    .info{
+                        .arow{
+                            opacity: 1;
+                        }
+                    }
+                }
+                .info{
+                    position: absolute;
+                    .arow{
+                        margin-top: 40px;
+                        transform: translate(14px,0);
+                        animation: animate_arrow 1s 1s ease-in-out infinite;
+                        opacity:0;
+                        transition: all .3s ease-in-out;
+                        i{
+                            font-size: 25px;
+                        }
+                        @media(max-width: 768px){
+                            display: none;
+                        }
+                    }
+                    @keyframes animate_arrow {
+                        0%{
+                            transform: translate(15px,0);
+                        }
+                        50%{
+                            transform: translate(25px,0);
+                        }
+                        100%{
+                            transform: translate(15px,0);
+                        }
+                    }
+                }
+                .cont_img{
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    bottom: 0;
+                    padding: 0;
+                    right: 0;
+                    img{
+                        width:100%;
+                        height:100%;
+                    }
+                }
+            }
+        }
+    } /******************* start  you mat like   *********************/
+    .may_like{
+        position: absolute;
+        left:-10px;
+        h4{
+            position: relative;
+            width: 200px;
+            margin-bottom: 25px;
+            top: 5px;
+            left: -17px;
+            font-weight: bold;
+            font-size: 19px;
+            text-transform: capitalize;
+        }
+        .item{
+            height: 65px;
+            margin-top: 26px;
+            .row{
+                .col{
+                    padding:0;
+                    .cont_img{
+                        width: 75px;
+                        img{
+                            width:100%;
+                            height: 100%;
+                        }
+                    }
+                    .info{
+                        position: absolute;
+                        left: -26px;
+                        top:3px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            h6{
+                                margin:0;
+                                color:#282828;
+                                transition: all .3s ease-in-out;
+                                text-transform: capitalize;
+                            }
+                            span{
+                                display: block;
+                                width:150px;
+                                font-size: 13px;
+                                color:#999;
+                                transition: all .3s ease-in-out;
+                            }
+                            &:hover{
+                                h6,span{
+                                    color:#D92121;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .discription{
+        bottom: 30px;
+        position: absolute;
+        width: 251px;
+        left: -30px;
+        h3{
+            font-size: 15px;
+            color:#999;
+        }
+        button{
+            border: 1px solid #D92121;
+            padding:7px;
+            border-radius: 5px;
+            width:100%;
+            background: #fff;
+            transition: all .5s ease-in-out;
+            color: #D92121;
+            outline: none;
+            &:hover{
+                background: #D92121;
+                color: #fff;
+            }
+        }
+    }
+}
+/****************************************************** end header  ************************************/
+
+
+
+/********************************************* start trend section   ************************************/
+.trend{
+    padding:25px;
+    background: #fff;
+    h3{
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 18px;
+        color: #222;
+    }
+    .item{
+        &:hover{
+            cursor: pointer;
+            .cont_img{
+                transform: scale(1.06);
+            }
+            p{
+                color:#D92121;
+            }
+        }
+        .cont_img{
+            width:160px;
+            margin: 10px auto;
+            transition: all .5s ease-in-out;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+    }
+    p{
+        margin-top:10px;
+        transition: all .5s ease-in-out;
+    }
+}
+/****************************************************** end trend section   ************************************/
+
+
+
+
+/****************************************************** start main producs   ************************************/
+.main_products{
+    padding-left: 15px;
+    .cont_img_part_one{
+        background: url('../imgs/main_products/main_img/section_one.PNG');
+    }
+    .cont_img_part_two{
+        background: url('../imgs/main_products/main_img/Machinery.webp');
+    }
+    .cont_img_part_three{
+        background: url('../imgs/main_products/main_img/Vehicle.webp');
+    }
+    .col_img{
+        @media(max-width:1200px){
+            h3{
+                display: inline;
+            }
+        }
+        .title{
+            padding:20px;
+            margin-top:8px;
+            h3{
+                margin: 6px 0;
+                font-weight: bold;
+                font-size: 23px;
+                color:#222;
+            }
+            button{
+                cursor: pointer;
+                margin-top: 20px;
+                padding: 3px 5px;
+                text-transform: capitalize;
+                border-radius: 3px;
+                border: 1px solid #D92121;
+                background: #D92121;
+                outline: none;
+                color: #f1f1f1;
+            
+            }
+        }
+    }
+    .products{
+        padding-right: 15px;
+        @media (max-width:1200px) {
+            padding-left: 15px;
+        }
+        >div{
+            padding:0
+        }
+        .prodcut{
+            border: 1px solid #F0F1F2;
+            height: 200px;
+            padding:23px;
+            display: flex;
+            justify-content:space-between;
+            background:#fff;
+            &:hover{
+                cursor: pointer;
+                .cont_img{
+                    transform: scale(1.06);
+                }
+                p{
+                    color:#D92121;
+                }
+            }
+            p{
+                transition: all .5s ease-in-out;
+            }
+            .cont_img{
+                width: 110px;
+                margin-top: 40px;
+                height: 100px;
+                transition: all .5s ease-in-out;
+                img{
+                    width:100%;
+                    height: 100%;;
+                }
+            }
+        }
+    }
+}
+/****************************************************** end  main producs   ************************************/
+
+
+
+
+/****************************************************** start qustions   ************************************/
+.questions{
+    background:url('../imgs/form/3.png');
+    padding:25px;
+    background-size: cover;
+    height: 400px;
+    .info{
+        padding:60px 60px 0 60px;
+        h3{
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 30px;
+            color:#fff;
+        }
+        p{
+            margin: 0;
+            color:#f1f1f1;
+        }
+        a{
+            margin-top: 25px;
+            display: block;
+            text-decoration: none;
+            width: 100px;
+            color:#E64545;
+            &:hover{
+                color:#D92121;
+            }
+        }
+    }
+    .form{
+   
+        form{
+            background:#fff;
+            width:100%;
+            margin-bottom: 100px;
+            padding:25px;
+            input{
+                display: block;
+                width:100%;
+                margin-top: 15px;
+                border-radius: 5px;
+                overflow: hidden;
+                outline: none;
+                border:1px solid #dadbdb;
+                &:hover{
+                    border:1px solid #888;
+                }
+                &:first-of-type{
+                    padding: 7px;
+                }
+                &:nth-of-type(2){
+                    padding: 7px 7px 30px 7px;
+                }
+                &:nth-of-type(3){
+                    display: inline-block !important;
+                    width:150px;
+                    padding:9px;
+                }
+            }
+            select{
+                width:150px;
+                padding:11px;
+                border-radius: 3px;
+                margin-left: 5px;
+                overflow: hidden;
+                outline: none;
+                border:1px solid #dadbdb;
+                &:hover{
+                    border:1px solid #888;
+                }
+            }
+            button{
+                padding: 5px 10px;
+                border-radius: 3px;
+                outline: none;
+                border:none;
+                display: block;
+                margin-top: 18px;
+                background: #E64545;
+                color:#ffff;
+                &:hover{
+                    background: #D92121;
+                }
+            }
+        }
+    }
+}
+/****************************************************** end qustions    ************************************/
+
+
+/****************************************************** start sourcing    ************************************/
+.sourcing{
+    margin-top: 50px;
+    .row{
+        >div{
+            padding:7px;
+            &:first-of-type{
+                padding-left: 15px;
+                @media (max-width:1200px) {
+                    padding-right: 7px;
+                }
+            }
+            &:last-of-type{
+                padding-right: 15px;
+                @media (max-width:1200px) {
+                    padding-right: 7px;
+                }
+            }
+        }
+    }
+    .card{
+        .card-img-top{
+            background:url('../imgs/soursing/1.jpg');
+            height: 200px;
+            background-size: cover;
+            position: relative;
+            padding:20px;
+            transition: all .5 ease-in-out;
+            &:hover{
+                .overlay{
+                    opacity: 1;
+                }
+                .arow{
+                    opacity: 1;
+                }
+            }
+            h3{
+                color:#fff;
+                z-index: 3;
+                position: relative;
+                font-size: 24px;
+                font-weight: bold;
+                padding-right: 20px;
+            }
+            p{
+                color: #f0e2e2;
+                margin: 0;
+                z-index: 3;
+                font-size: 14px;
+                position: relative;
+            }
+            .arow{
+                margin-top: 10px;
+                transform: translate(14px,0);
+                animation: animate_arrow 1s 1s ease-in-out infinite;
+                opacity:0;
+                z-index: 3;
+                color:#fff;
+                position: relative;
+                transition: all .3s ease-in-out;
+                i{
+                    font-size: 25px;
+                }
+            }
+            .overlay{
+                position: absolute;
+                width:100%;
+                height: 100%;
+                top:0;
+                left:0;
+                background:#210d0d78;
+                opacity: .7;
+                z-index: 2;
+                transition: all .5 ease-in-out;
+            }
+        }
+        .card-body{
+            text-align: center;
+            .row{
+                .col-4:hover{
+                    .cont_img{
+                        background:#d1d4d7;
+                    }
+                    .info{
+                        p{
+                            color:#E64545;
+                        }
+                    }
+                }
+            }
+            .cont_img{
+                background:#F0F1F2;
+                text-align: center;
+                width:85px;
+                height: 85px;
+                border-radius: 50%;
+                margin:auto;
+                transition: all .5s ease-in-out;
+                img{
+                    display: block;
+                    position: relative;
+                    left: -5px;
+                    top: -5px;
+                }
+            }
+            .info{
+                text-align: center;
+                margin: auto;
+                p{
+                    margin:0;
+                    transition: all .5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+/****************************************************** end sourcing    ************************************/
+
+
+
+/****************************************************** start pioner    ************************************/
+.pioner{
+    padding:25px;
+    background:#fff;
+    .row_one{
+        margin-bottom: 15px;
+        .left_partt{
+            span{
+                font-weight: bold;
+            }
+        }
+        .right_part{
+            position: relative;
+            button{
+                position: absolute;
+                right: 20px;
+                padding: 5px 10px;
+                border-radius: 3px;
+                outline: none;
+                border:none;
+                display: block;
+                margin-top: 18px;
+                background: #E64545;
+                color:#ffff;
+                &:hover{
+                    background: #D92121;
+                }
+            }
+        }
+    }
+    .row_two{
+        .big{
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                img{
+                    transform: scale(1.04);
+                }
+            }
+            img{
+                width:100%;
+                height:100%;
+                transition: all .5s ease-in-out;
+            }
+            .overlay{
+                position: absolute;
+                width:100%;
+                height: 100%;
+                top:0;
+                left:0;
+                background:#00000045;
+            }
+        }
+        .col_one_min, .col_two_min{
+            padding:0 8px;
+            @media (max-width:768px) {
+                padding:15px;
+                &:first-of-type{
+                    padding-right: 7px !important;
+                }
+                &:last-of-type{
+                    padding-left: 7px !important;
+                }
+            }
+        }
+        .min{
+            height: 220px;
+            background: #f00;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+    }
+}
+/****************************************************** end pioner    ************************************/
+
+
+/****************************************************** start trade     ************************************/
+.trade{
+    padding:25px 25px 0 25px;
+    background:#fff;
+    .title{
+        margin-bottom: 20px;
+        h4{
+            font-weight:bold;
+            transition: all .5 ease-in-out;
+            cursor: pointer;
+            &:hover{
+                color:#E64545;
+            }
+        }
+    }
+    .main{
+        padding-bottom: 0;
+        .cont_img{
+            height:450px;
+            @media (max-width:768px) {
+                height: 300px;
+                margin-bottom: 40px;
+            }
+            @media (max-width:991px) {
+                margin-bottom: 40px;
+            }
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+    .min{
+        .info{
+            .item {
+                margin:0;
+                @media(max-width:991px){
+                    display: inline-block;
+                    margin-right: 50px;
+                }
+                >div{
+                    display: inline-block;
+                    
+                }
+                .cont_img{
+                    position: relative;
+                    top:-40px;
+                    width:100px;
+                    height: 100px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .info{
+                    position: relative;
+                    left:20px;
+                    h3{
+                        font-size: 18px;
+                        font-weight: bold;
+                        @media(max-width:991px){
+                            font-size: 15px;
+                        }
+                    }
+                    span{
+                        display: block;
+                        border:1px solid #fff;
+                        width:150px;
+                        margin:10px 0;
+                        border: 1px solid #E64545;
+                        padding:3px 5px;
+                        color:#E64545;
+                        border-radius: 5px;
+                        font-size: 14px;
+                    }
+                    p{
+                        margin:0;
+                        color:#999;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+/****************************************************** end trade    ************************************/
+
+
+
+
+
+/****************************************************** start quick    ************************************/
+.quick{
+    padding: 50px 0;
+    h6{
+        margin-bottom:10px;
+    }
+    ul{
+        list-style: none;
+        p{
+            margin-bottom: 20px;
+        }
+        li{
+            color:#8888A3;
+            font-size: 12px;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                color:#E64545;
+            }
+        }
+    }
+}
+/****************************************************** start quick    ************************************/
+
+
+
+
+
+/****************************************************** start footer    ************************************/
+footer{
+    padding: 25px;
+    background: #E3E4E6;
+    ul{
+        list-style: none;
+        p{
+            font-weight: bold;
+            font-size: 14px;
+        }
+        li{
+            font-size: 14px;
+            color:#595555bd;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                color:#E64545;
+            }
+        }
+    }
+    .companys{
+        .cont_img{
+            margin:10px 0;
+            background:#d7d8d9f0;
+            cursor: pointer;
+            padding:13px 8px;
+            width:80%;
+            transition: all .5s ease-in-out;
+            &:hover{
+                background: #d1d4d7;
+            }
+        }
+        h5{
+            font-weight: bold;
+            font-size: 15px;
+            margin: 17px 0;
+            margin-left: -60px;
+        }
+    }
+}
+
+.copy{
+    padding:30px 0 30px 0;
+    background: #E3E4E6;
+}
+/****************************************************** end header  ************************************/
+
+
+.more{
+    border: 1px solid #F0F1F2;
+    height: 200px;
+    background:#fff;
+    .logo{
+        width:50px;
+        height: 50px;
+        border:1px solid #E64545;
+        border-radius:50%;
+        text-align: center;
+        line-height: 60px;
+        margin: 50px auto 0 auto;
+        cursor: pointer;
+        i{
+            font-size: 25px;
+            color:#E64545;
+
+        }
+    }
+    p{
+        margin-top:10px;
+    }
+}
